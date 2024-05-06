@@ -19,7 +19,9 @@ const Counter = ({initialValue = 0}: CounterProps) => {
         <h1>Counter</h1>
         <div>
             <button onClick={() => setCount( count => count + 1) }>+</button>
-            <p>{count}</p>
+            <p data-test-id="counter">
+                {count}
+            </p>
             <button 
                 disabled={count === 0}
                 onClick={() => setCount( count => count - 1) }
